@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Voice and Video Chat with Data Channel and Face Mapping</title>
+  <!--script src="https://cdn.jsdelivr.net/npm/peerjs@1.3.1/dist/peerjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script-->
+  <script src="./js/lib/peerjs.min.js"></script>
+  <script src="./js/lib/tfjs-core"></script>
+  <script src="./js/lib/tfjs-backend-webgl"></script>
+  <script src="./js/lib/camera_utils/camera_utils.js"></script>
+  <script src="./js/lib/drawing_utils/drawing_utils.js"></script>
+  <script src="./js/lib/face_mesh/face_mesh.js"></script>
+  <style>
+    .outputCanvas, video { width: 150px; height: 100px; margin: 5px; border: 1px solid black; }
+    #keys { margin-top: 20px; font-family: Arial, sans-serif; }
+    canvas { position:absolute; }
+  </style>
+</head>
+<body>
+  <video id="localVideo" autoplay playsinline muted>
+  </video>
+  <canvas id="outputCanvas" class="outputCanvas">
+    
+  </canvas>
+    
+  <div id="remoteVideos"></div>
+  <div id="keys">Keys pressed: </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

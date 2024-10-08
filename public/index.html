@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>d6 by thrax</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./lib/three.module.js",
+          "three/addons/": "./lib/"
+        }
+      }
+    </script>
+    <script src="./comnub/lib/peerjs.min.js"></script>
+    <script type="module" src="./comnub/index.js"></script>
+    <script type="module" src="./main.js" defer></script>
+  </head>
+  <body>
+    <span
+      id="expression"
+      contenteditable="true"
+      style="cursor: pointer"
+      spellcheck="false"
+      >drag .json here</span
+    >
+    <div
+      id="rules"
+      contenteditable="false"
+      style="
+        cursor: pointer;
+        color: white;
+        background: rgba(0, 0, 0, 0.25);
+        position: absolute;
+        font-size: 9pt;
+      "
+      spellcheck="false"
+    ></div>
+    <div class="dice-tray">
+      <div class="dice-spot"></div>
+      <div class="dice-spot"></div>
+      <div class="dice-spot"></div>
+      <div class="dice-spot"></div>
+      <div class="dice-spot"></div>
+    </div>
+    <div
+      id="popup-container"
+      contenteditable="false"
+      spellcheck="false"
+    >
+      <div
+        id="popup"
+        contenteditable="false"
+        spellcheck="false"
+      ></div>
+    </div>
+    <video id="localVideo" autoplay playsinline muted></video>
+    <canvas id="outputCanvas" class="outputCanvas"> </canvas>
+    <div id="remoteVideos"></div>
+    <div id="keys">Keys pressed:</div>
+    <body>
+</html>

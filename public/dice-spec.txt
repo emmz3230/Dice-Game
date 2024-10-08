@@ -1,0 +1,50 @@
+{
+  "cubes": [
+    // affordable set of dice
+    {
+      "diceId": 1, // unique from 1 to 5
+      "face": 4 // from 1 to 6. can be repeated
+    }
+  ],
+  "base": [
+    // array of prize combinations
+    {
+      // if a single combination (1 or 5) then there is only one element in the array
+      "price": 10, // cost of combination (in this case one dice)
+      "dices": [
+        {
+          "diceId": 2,
+          "face": 1,
+          "isMoved": true // an indication that the current roll should move the die to the base. the presence of the "false" flag indicates that the cube was on the base in the previous move.
+        }
+      ]
+    },
+    {
+      // here a combination of three cubes fell out, worth 30
+      "price": 30,
+      "dices": [
+        {
+          "diceId": 3,
+          "face": 3,
+          "isMoved": true
+        },
+        {
+          "diceId": 4,
+          "face": 4,
+          "isMoved": true
+        },
+        {
+          "diceId": 5,
+          "face": 5,
+          "isMoved": true
+        }
+      ]
+    }
+  ],
+  "params": {
+    "turnNumber": 1, // move ordinal number
+    "sessionScore": 40, // current throw cycle count
+    "score": 150, // total game score (updated after each round of throws is completed)
+    "mustPlay": true // the flag means that the user is obliged to play the next game (there is no "pass" button)
+  }
+}
